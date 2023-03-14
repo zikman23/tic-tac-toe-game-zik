@@ -2,35 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: sans-serif;
 }
 .App {
   height: 100vh;
-  background: #cbd2d6;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .square {
-  background: #498da6;
+  background: #ffffff;
   height: 10rem;
   width: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 4rem;
 }
 .square:hover {
-  background: #fcf649;
+  background: #d8d8d8;
 }
 .square.clicked {
-  background: #01233d;
+  background: #f5f5f5;
   cursor: not-allowed;
 }
 .board {
   display: grid;
+  background-color: #000000;
   grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-content: center;
@@ -49,20 +50,20 @@
   background: rgba(0, 0, 0, 0.8);
 }
 .btn {
-  background: #cbd2d6;
+  background: #dbe0e4;
   color: #01233d;
-  border: 2px solid #cbd2d6;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  border: 2px solid #85898b;
+  font-size: 1.2rem;
+  margin: 3rem;
   padding: 10px 14px;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s ease-out;
-  max-height: 7rem;
+  max-height: 5rem;
 }
 .win-text {
   color: white;
-  font-size: 10rem;
+  font-size: 4rem;
 }
 .player-turn {
   color: #01233d;

@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Square from "./Square";
-import EndGame from "./EndGame";
-const INITIAL = "";
-const X_PLAYER = "X";
-const O_PLAYER = "O";
+import { useState } from 'react';
+import Square from './Square';
+import EndGame from './EndGame';
+const INITIAL = '';
+const X_PLAYER = 'X';
+const O_PLAYER = 'O';
 const winCombination = [
   [0, 1, 2],
   [3, 4, 5],
@@ -16,7 +16,7 @@ const winCombination = [
 ];
 const TicTacToe = () => {
   const [grid, setGrid] = useState(Array(9).fill(INITIAL));
-  const [player, setPlayer] = useState(false);
+  const [player, setPlayer] = useState(true);
   const [gameFinished, setGameFinished] = useState(false);
   const [draw, setDraw] = useState(false);
   const newGame = () => {
@@ -72,17 +72,9 @@ const TicTacToe = () => {
 
   return (
     <div>
-      <div className="player-turn">
-        Turn player: {player ? X_PLAYER : O_PLAYER}
-      </div>
+      <div className="player-turn">{player ? X_PLAYER : O_PLAYER}'s turn</div>
       {gameFinished && (
-        <EndGame
-          newGame={newGame}
-          player={player}
-          draw={draw}
-          X_PLAYER={X_PLAYER}
-          O_PLAYER={O_PLAYER}
-        />
+        <EndGame newGame={newGame} player={player} draw={draw} X_PLAYER={X_PLAYER} O_PLAYER={O_PLAYER} />
       )}
       <Square clickedArray={grid} handleClick={handleClick} />
     </div>
